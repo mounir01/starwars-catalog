@@ -30,7 +30,7 @@ import { StarWarsService } from './star-wars.service';
     NgbDropdownModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [StarWarsService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
 })
