@@ -1,23 +1,38 @@
 <div class="content">
-	<div class='nav-container'>
-		{{pageTitle}}
-	</div>
-	<div flex-container="row" flex-gutter="24">
-		<div flex-item>
-			<details-badge
-				class='wide' 
-				img-url='starship.img_url'
-				header='starship.name'>
-				Model: {{starship.model}}<br>
-				Class: {{starship.shipclass}}<br>
-				Cost: {{starship.cost.number | number}}{{starship.cost.unit}}<br>
-				Speed: {{starship.speed.number | number}}{{starship.speed.unit}}<br>
-				MGLT: {{starship.mglt}}<br>
-				Length: {{starship.length.number | number}}{{starship.length.unit}}<br>
-				Cargo Capacity: {{starship.cargo_capacity.number | number}}{{starship.cargo_capacity.unit}}<br>
-				Mimimum Crew: {{starship.min_crew | number}}<br>
-				Passengers: {{starship.passengers | number }}
-			</details-badge>
+	<div class="card">
+		<div class="card-header">
+			{{starship.name}} {{pageTitle}}
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col">
+					<img [src]="starship.img_url" height="350" width="350" class="home-image" />
+				</div>
+				<div class="col">
+						<div flex-item>
+						<details-badge
+							class='wide'>
+							Model: {{starship.model}}<br>
+							Class: {{starship.starship_class}}<br>
+							Cost: {{starship.cost_in_credits | number}} Units<br>
+							Speed: {{starship.max_atmosphering_speed | number}}<br>
+							MGLT: {{starship.MGLT}}<br>
+							Length: {{starship.length | number}}<br>
+							Cargo Capacity: {{starship.cargo_capacity | number}}<br>
+							Passengers: {{starship.passengers | number }}
+						</details-badge>
+					</div>
+				</div>
+				<div class="w-100"></div>
+				<div class="col">
+					<a class='btn btn-default' (click)='onBack()' style='width:80px'>
+						<i class='glyphicon glyphicon-chevron-left'></i> Back
+					</a>
+				</div>
+			  </div>
+			
+		
+			
 		</div>
 	</div>
 </div>

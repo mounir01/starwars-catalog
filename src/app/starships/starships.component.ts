@@ -23,6 +23,7 @@ export class StarshipsComponent implements OnInit {
             let params = (response as any);
             console.log(params);
             this.starships = params.results;
+            this._starwarsService.setStarshipsId(this.starships)
             this._starwarsService.setStarshipsImgUrl(this.starships);
           },
           err => console.error(err),
