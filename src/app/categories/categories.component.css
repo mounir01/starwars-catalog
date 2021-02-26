@@ -1,0 +1,31 @@
+.content {
+	width: 80%;
+	margin: auto;
+	@media (max-width: 600px) {
+    	width: 100%;
+	}
+}
+
+.category-image {
+	width: 100%;
+}
+
+.category-title {
+	font-size: 1.2em;
+	margin-left: -16px;
+	margin-right: -16px;
+	padding-left: 1em;
+	background-color: rgba(0, 0, 0, 0.4);	
+}
+
+.category{margin-top:2em;margin-bottom:2em;margin-right:3%;width:32%}
+
+.starwarsText{
+    color: #FFE81F;
+	text-align: center;
+	font-style: italic;
+}
+
+.starwarsbACKGROUD {
+    background-color:gray;
+}
